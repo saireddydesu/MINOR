@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Create Account | FINGERS</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="register.css?v=10">
+  <script src="register.js?v=10" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">✚</span>
+      <span>FINGERS</span>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <!-- LEFT MEDICAL PANEL -->
+    <section class="showcase">
+
+      <div class="ambient" aria-hidden="true">
+        <span style="--x:9%;--y:17%;--d:0s">A+</span>
+        <span style="--x:75%;--y:12%;--d:-2s">✚</span>
+        <span style="--x:77%;--y:73%;--d:-4s">O−</span>
+        <span style="--x:8%;--y:81%;--d:-6s">🩺</span>
+        <span style="--x:54%;--y:82%;--d:-3s">🧬</span>
+        <span style="--x:45%;--y:10%;--d:-7s">B+</span>
+      </div>
+
+      <div class="showcase-content">
+
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          DIGITAL HEALTHCARE RESEARCH
+        </div>
+
+        <h1>
+          Research meets
+          <em>modern healthcare.</em>
+        </h1>
+
+        <p>
+          Welcome to FINGERS, an academic prototype
+          exploring AI-based fingerprint image analysis
+          and blood-group research.
+        </p>
+
+        <!-- ANIMATED CENTRAL VISUAL -->
+        <div class="visual">
+
+          <div class="ring ring-one"></div>
+          <div class="ring ring-two"></div>
+
+          <div class="center">
+            <div class="fingerprint">◎</div>
+            <strong>FINGERS</strong>
+            <small>Research prototype</small>
+          </div>
+
+          <div class="orbit orbit-a">A+</div>
+          <div class="orbit orbit-b">✚</div>
+          <div class="orbit orbit-c">🩺</div>
+
+        </div>
+
+        <div class="feature-row">
+          <span>✦ Research focused</span>
+          <span>✦ Simple interface</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RIGHT REGISTRATION PANEL -->
+    <section class="form-area">
+
+      <!-- FLOATING MEDICAL SYMBOLS -->
+      <div class="register-medical-bg"
+           aria-hidden="true">
+
+        <span
+          style="--x:8%;--y:12%;--size:45px;--speed:12s;--delay:0s">
+          A+
+        </span>
+
+        <span
+          style="--x:75%;--y:15%;--size:50px;--speed:15s;--delay:-3s">
+          O−
+        </span>
+
+        <span
+          style="--x:12%;--y:70%;--size:48px;--speed:14s;--delay:-5s">
+          🩺
+        </span>
+
+        <span
+          style="--x:82%;--y:65%;--size:42px;--speed:17s;--delay:-2s">
+          B+
+        </span>
+
+        <span
+          style="--x:60%;--y:85%;--size:42px;--speed:13s;--delay:-7s">
+          🧬
+        </span>
+
+        <span
+          style="--x:45%;--y:8%;--size:60px;--speed:18s;--delay:-4s">
+          ✚
+        </span>
+
+        <span
+          style="--x:5%;--y:42%;--size:38px;--speed:16s;--delay:-6s">
+          AB−
+        </span>
+
+        <span
+          style="--x:85%;--y:90%;--size:45px;--speed:14s;--delay:-1s">
+          O+
+        </span>
+
+      </div>
+
+      <!-- FORM CARD -->
+      <div class="form-card">
+
+        <div class="form-heading">
+
+          <div class="mini-icon">✚</div>
+
+          <div class="eyebrow">GET STARTED</div>
+
+          <h2>Create your account</h2>
+
+          <p>
+            Enter your details to explore
+            the FINGERS prototype.
+          </p>
+
+        </div>
+
+        <form id="registerForm" novalidate>
+
+          <!-- FULL NAME -->
+          <div class="field">
+            <label for="fullName">Full name</label>
+
+            <input
+              id="fullName"
+              name="fullName"
+              type="text"
+              placeholder="Enter your full name"
+              autocomplete="name"
+              minlength="2"
+              required>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="field">
+            <label for="registerEmail">
+              Email address
+            </label>
+
+            <input
+              id="registerEmail"
+              name="email"
+              type="email"
+              placeholder="example@gmail.com"
+              autocomplete="email"
+              required>
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="field">
+            <label for="registerPassword">
+              Password
+            </label>
+
+            <div class="password-box">
+
+              <input
+                id="registerPassword"
+                name="password"
+                type="password"
+                placeholder="At least 8 characters"
+                autocomplete="new-password"
+                minlength="8"
+                required>
+
+              <button
+                type="button"
+                class="toggle"
+                data-target="registerPassword"
+                aria-label="Show password">
+                Show
+              </button>
+
+            </div>
+          </div>
+
+          <!-- CONFIRM PASSWORD -->
+          <div class="field">
+            <label for="confirmPassword">
+              Confirm password
+            </label>
+
+            <div class="password-box">
+
+              <input
+                id="confirmPassword"
+                name="confirmPassword"
+                type="password"
+                placeholder="Re-enter your password"
+                autocomplete="new-password"
+                minlength="8"
+                required>
+
+              <button
+                type="button"
+                class="toggle"
+                data-target="confirmPassword"
+                aria-label="Show confirm password">
+                Show
+              </button>
+
+            </div>
+          </div>
+
+          <!-- CONSENT -->
+          <label class="consent">
+
+            <input
+              type="checkbox"
+              id="agreeTerms"
+              required>
+
+            <span>
+              I understand FINGERS is an academic
+              research prototype,
+              <strong>
+                not a medical diagnostic tool.
+              </strong>
+            </span>
+
+          </label>
+
+          <!-- MESSAGES -->
+          <p
+            id="registerMessage"
+            class="message"
+            role="status"
+            aria-live="polite">
+          </p>
+
+          <!-- CREATE ACCOUNT -->
+          <button
+            type="submit"
+            id="createAccountBtn"
+            class="submit">
+
+            Create account
+            <span aria-hidden="true">→</span>
+
+          </button>
+
+        </form>
+
+        <!-- SIGN IN -->
+        <div class="divider">
+          <span></span>
+          ALREADY HAVE AN ACCOUNT?
+          <span></span>
+        </div>
+
+        <a href="login.html" class="signin">
+          Sign in instead →
+        </a>
+
+        <p class="footnote">
+          ✚ FINGERS · Academic research prototype
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

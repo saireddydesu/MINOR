@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>User Dashboard | FINGERSE</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="user-dashboard.css">
+  <script src="user-dashboard.js" defer></script>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar" id="sidebar">
+
+    <a href="index.html" class="brand">
+      <span class="brand-mark">✚</span>
+      <span>FIND<b>TYPE</b></span>
+    </a>
+
+    <div class="nav-label">YOUR WORKSPACE</div>
+
+    <nav class="navigation" aria-label="Dashboard navigation">
+
+      <button class="nav-item active"
+              data-page="overview">
+        <span class="nav-icon">▦</span>
+        Dashboard
+      </button>
+
+      <button class="nav-item"
+              data-page="detector">
+        <span class="nav-icon">◎</span>
+        Blood Group Detector
+      </button>
+
+      <button class="nav-item"
+              data-page="reports">
+        <span class="nav-icon">▤</span>
+        My Reports
+      </button>
+
+      <button class="nav-item"
+              data-page="sessions">
+        <span class="nav-icon">◷</span>
+        Sessions
+      </button>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+      <div class="sidebar-note">
+        <div class="note-symbol">✚</div>
+        <strong>Research prototype</strong>
+        <p>
+          Exploring fingerprint image
+          analysis in an academic setting.
+        </p>
+      </div>
+
+      <button class="logout-btn" id="logoutBtn">
+        <span>↪</span>
+        Logout
+      </button>
+
+    </div>
+
+  </aside>
+
+  <!-- MAIN AREA -->
+
+  <main class="main">
+
+    <header class="topbar">
+
+      <div class="topbar-left">
+
+        <button id="menuBtn"
+                class="menu-btn"
+                aria-label="Open menu">
+          ☰
+        </button>
+
+        <div class="breadcrumb">
+          Workspace
+          <span>/</span>
+          <strong id="currentPage">Dashboard</strong>
+        </div>
+
+      </div>
+
+      <div class="topbar-right">
+
+        <span class="status">
+          <span class="status-dot"></span>
+          Research environment
+        </span>
+
+        <div class="user-avatar" id="userAvatar">
+          U
+        </div>
+
+      </div>
+
+    </header>
+
+    <!-- ANIMATED BACKGROUND -->
+
+    <div class="medical-background"
+         aria-hidden="true">
+
+      <span class="medical-symbol m1">A+</span>
+      <span class="medical-symbol m2">✚</span>
+      <span class="medical-symbol m3">🧬</span>
+      <span class="medical-symbol m4">O−</span>
+      <span class="medical-symbol m5">🩺</span>
+      <span class="medical-symbol m6">B+</span>
+      <span class="medical-symbol m7">✚</span>
+      <span class="medical-symbol m8">◎</span>
+
+    </div>
+
+    <div class="content">
+
+      <!-- DASHBOARD -->
+
+      <section class="page active" id="overview">
+
+        <div class="welcome-card">
+
+          <div class="welcome-content">
+
+            <div class="eyebrow">
+              <span class="status-dot"></span>
+              YOUR PERSONAL WORKSPACE
+            </div>
+
+            <h1>
+              Welcome back,
+              <span id="welcomeName">Researcher</span>
+              <span class="sparkle">✦</span>
+            </h1>
+
+            <p>
+              Explore fingerprint image analysis,
+              manage your demo reports and track
+              your research activity in one place.
+            </p>
+
+            <button class="primary-btn"
+                    data-go="detector">
+              Open detector
+              <span>↗</span>
+            </button>
+
+          </div>
+
+          <div class="hero-visual">
+
+            <div class="hero-ring ring-one"></div>
+            <div class="hero-ring ring-two"></div>
+
+            <div class="hero-center">
+              <div class="fingerprint-icon">◎</div>
+              <strong>FINGERS
+
+              </strong>
+              <small>Research platform</small>
+            </div>
+
+            <span class="orbit orbit-a">✚</span>
+            <span class="orbit orbit-b">🧬</span>
+            <span class="orbit orbit-c">A+</span>
+
+          </div>
+
+        </div>
+
+        <div class="section-title">
+          <h2>Workspace overview</h2>
+          <p>Your research tools at a glance.</p>
+        </div>
+
+        <div class="stats-grid">
+
+          <div class="stat-card">
+
+            <div class="stat-icon mint">◎</div>
+
+            <span>Fingerprint upload</span>
+
+            <strong>Ready</strong>
+
+            <small>Research demo interface</small>
+
+          </div>
+
+          <div class="stat-card">
+
+            <div class="stat-icon blue">▤</div>
+
+            <span>Demo reports</span>
+
+            <strong id="reportCount">0</strong>
+
+            <small>Saved in this browser session</small>
+
+          </div>
+
+          <div class="stat-card">
+
+            <div class="stat-icon purple">◷</div>
+
+            <span>Activities</span>
+
+            <strong id="sessionCount">0</strong>
+
+            <small>Current session history</small>
+
+          </div>
+
+        </div>
+
+        <div class="section-title">
+          <h2>Quick access</h2>
+          <p>Choose where you want to go.</p>
+        </div>
+
+        <div class="quick-grid">
+
+          <button class="quick-card"
+                  data-go="detector">
+
+            <div class="quick-icon mint">◎</div>
+
+            <h3>Blood Group Detector</h3>
+
+            <p>
+              Upload a fingerprint image
+              to explore our research prototype.
+            </p>
+
+            <span>Open detector ↗</span>
+
+          </button>
+
+          <button class="quick-card"
+                  data-go="reports">
+
+            <div class="quick-icon blue">▤</div>
+
+            <h3>My Reports</h3>
+
+            <p>
+              Access your saved fingerprint
+              upload demonstration records.
+            </p>
+
+            <span>View reports ↗</span>
+
+          </button>
+
+          <button class="quick-card"
+                  data-go="sessions">
+
+            <div class="quick-icon purple">◷</div>
+
+            <h3>Session History</h3>
+
+            <p>
+              Review your recent activity
+              in this browser session.
+            </p>
+
+            <span>View sessions ↗</span>
+
+          </button>
+
+        </div>
+
+      </section>
+
+      <!-- BLOOD GROUP DETECTOR -->
+
+      <section class="page" id="detector">
+
+        <div class="page-heading">
+
+          <div class="eyebrow">
+            FINGERPRINT RESEARCH
+          </div>
+
+          <h1>Blood Group Detector</h1>
+
+          <p>
+            Upload your fingerprint image
+            to explore the FINGERS research interface.
+          </p>
+
+        </div>
+
+        <div class="detector-layout">
+
+          <div class="upload-card">
+
+            <div class="upload-heading">
+
+              <div class="upload-heading-icon">◎</div>
+
+              <div>
+                <h2>Upload your fingerprint</h2>
+                <p>
+                  Select a clear image
+                  from your device.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="drop-zone"
+                 id="dropZone"
+                 role="button"
+                 tabindex="0">
+
+              <input
+                id="fingerprintInput"
+                type="file"
+                accept="image/png,image/jpeg,image/webp"
+                hidden>
+
+              <div class="upload-symbol">⇧</div>
+
+              <h3>Drop your fingerprint image here</h3>
+
+              <p>or click to browse files</p>
+
+              <span class="file-types">
+                PNG, JPG or WEBP · Max 5 MB
+              </span>
+
+            </div>
+
+            <div class="preview"
+                 id="previewContainer"
+                 hidden>
+
+              <img id="fingerprintPreview"
+                   alt="Selected fingerprint image">
+
+              <strong id="fileName"></strong>
+
+              <small id="fileSize"></small>
+
+              <button class="remove-btn"
+                      id="removeImage">
+                Remove image
+              </button>
+
+            </div>
+
+            <button class="primary-btn save-btn"
+                    id="saveRecordBtn"
+                    disabled>
+
+              Save demo record
+
+              <span>→</span>
+
+            </button>
+
+          </div>
+
+          <div class="information">
+
+            <div class="info-card">
+
+              <div class="info-icon">✚</div>
+
+              <h3>Research demonstration</h3>
+
+              <p>
+                This page demonstrates fingerprint
+                image uploading and preview.
+                It does not determine blood group.
+              </p>
+
+            </div>
+
+            <div class="info-card steps-card">
+
+              <h3>How it works</h3>
+
+              <div class="step">
+                <span>01</span>
+                <p>Choose a fingerprint image.</p>
+              </div>
+
+              <div class="step">
+                <span>02</span>
+                <p>Preview your selected image.</p>
+              </div>
+
+              <div class="step">
+                <span>03</span>
+                <p>Save a demo upload record.</p>
+              </div>
+
+            </div>
+
+            <div class="notice-card">
+
+              <strong>Medical notice</strong>
+
+              <p>
+                A fingerprint image cannot reliably
+                establish blood group. Use a validated
+                blood test for medical purposes.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- REPORTS -->
+
+      <section class="page" id="reports">
+
+        <div class="page-heading">
+
+          <div class="eyebrow">
+            YOUR RESEARCH RECORDS
+          </div>
+
+          <h1>My Reports</h1>
+
+          <p>
+            View your fingerprint image
+            upload demonstration history.
+          </p>
+
+        </div>
+
+        <div class="records-card">
+
+          <div class="records-header">
+
+            <h2>Upload records</h2>
+
+            <span class="demo-badge">
+              Demo only
+            </span>
+
+          </div>
+
+          <div id="reportsList"
+               class="records-list"></div>
+
+        </div>
+
+      </section>
+
+      <!-- SESSIONS -->
+
+      <section class="page" id="sessions">
+
+        <div class="page-heading">
+
+          <div class="eyebrow">
+            RECENT ACTIVITY
+          </div>
+
+          <h1>Session History</h1>
+
+          <p>
+            Your activity during
+            the current browser session.
+          </p>
+
+        </div>
+
+        <div class="records-card">
+
+          <div class="records-header">
+
+            <h2>Activity timeline</h2>
+
+            <span class="demo-badge">
+              Current session
+            </span>
+
+          </div>
+
+          <div id="sessionsList"
+               class="records-list"></div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <footer class="footer">
+
+      <span>
+        © FINGERS · Academic research prototype
+      </span>
+
+      <span>
+        Not intended for medical diagnosis
+      </span>
+
+    </footer>
+
+  </main>
+
+</div>
+
+<div class="toast"
+     id="toast"
+     role="status"></div>
+
+</body>
+</html>

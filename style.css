@@ -1,0 +1,1748 @@
+
+/* LOGIN AND REGISTRATION */
+
+.auth-body {
+  min-height: 100vh;
+  background: #f5fbfa;
+}
+
+.auth-logo {
+  position: absolute;
+  top: 25px;
+  left: 5%;
+  z-index: 5;
+  font: 800 27px 'Outfit', sans-serif;
+  color: var(--navy);
+}
+
+.auth-logo span { color: var(--teal); }
+
+.auth-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.auth-info {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #e4f7f3, #c5eee7);
+  padding: 160px 12% 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-decoration {
+  font-size: 80px;
+  color: #0d948825;
+  margin-bottom: 25px;
+}
+
+.auth-tag {
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.auth-info h1 {
+  font-size: clamp(35px, 4vw, 56px);
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+.auth-info > p {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+.auth-features {
+  margin-top: 35px;
+  display: grid;
+  gap: 18px;
+  color: #176e65;
+  font-weight: 600;
+}
+
+.auth-blood {
+  position: absolute;
+  color: #0d948829;
+  font: 800 60px 'Outfit', sans-serif;
+  animation: float 6s ease-in-out infinite;
+}
+
+.blood-one { top: 15%; right: 15%; }
+.blood-two { bottom: 12%; left: 10%; animation-delay: 2s; }
+.blood-three { bottom: 20%; right: 8%; animation-delay: 3s; }
+
+.auth-form-section {
+  padding: 110px 25px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: white;
+  padding: 38px;
+  border-radius: 22px;
+  box-shadow: 0 15px 60px #194f5612;
+}
+
+.auth-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  background: #e4f7f3;
+  color: var(--teal);
+  border-radius: 15px;
+  font-size: 29px;
+  margin-bottom: 25px;
+}
+
+.auth-card h2 {
+  font-size: 32px;
+}
+
+.auth-subtitle {
+  color: var(--muted);
+  margin: 10px 0 30px;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-card label {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 7px;
+}
+
+.auth-card input:not([type="checkbox"]) {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #d5e4e5;
+  border-radius: 10px;
+  padding: 0 15px;
+  font: inherit;
+  outline: none;
+  transition: .2s;
+}
+
+.auth-card input:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px #0d94881b;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 75px !important;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 15px;
+  background: none;
+  border: none;
+  color: var(--teal);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.terms-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+  color: var(--muted);
+  font-weight: 400 !important;
+}
+
+.terms-label input {
+  margin-top: 4px;
+  accent-color: var(--teal);
+}
+
+.auth-submit {
+  background: var(--teal);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 16px;
+  font: 700 16px 'DM Sans', sans-serif;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: .2s;
+}
+
+.auth-submit:hover {
+  background: #087c73;
+  transform: translateY(-2px);
+}
+
+.form-message {
+  font-size: 13px;
+  min-height: 18px;
+  color: #dc3545;
+}
+
+.form-message.success {
+  color: #087c73;
+}
+
+.auth-switch {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.auth-switch a, .back-home {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.back-home {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .auth-container { grid-template-columns: 1fr; }
+  .auth-info { padding: 115px 7% 45px; }
+  .auth-form-section { padding: 35px 18px; }
+  .auth-card { padding: 28px 22px; }
+}
+
+/* ANIMATED MEDICAL BACKGROUND */
+
+.medical-background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.medical-float {
+  position: absolute;
+  display: inline-block;
+  opacity: 0.23;
+  user-select: none;
+  filter: saturate(0.8);
+  animation: medicalFloat 14s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.medical-float:nth-child(3n) {
+  animation-name: medicalDrift;
+}
+
+.medical-float:nth-child(4n) {
+  animation-name: medicalRotate;
+}
+
+@keyframes medicalFloat {
+  0% {
+    transform: translate(0, 0) rotate(-12deg);
+  }
+  50% {
+    transform: translate(28px, -55px) rotate(12deg);
+  }
+  100% {
+    transform: translate(-22px, 35px) rotate(-8deg);
+  }
+}
+
+@keyframes medicalDrift {
+  0% {
+    transform: translate(-30px, 40px) scale(0.8);
+  }
+  100% {
+    transform: translate(45px, -65px) scale(1.15);
+  }
+}
+
+@keyframes medicalRotate {
+  0% {
+    transform: translateY(30px) rotate(-25deg);
+  }
+  100% {
+    transform: translateY(-50px) rotate(30deg);
+  }
+}
+
+/* Keep website content above the background */
+
+.navbar,
+.auth-container,
+.about,
+.how,
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+.auth-info,
+.auth-form-section {
+  isolation: isolate;
+}
+
+.auth-info {
+  background: linear-gradient(
+    145deg,
+    rgba(228,247,243,0.9),
+    rgba(197,238,231,0.85)
+  );
+}
+
+.auth-form-section {
+  background: rgba(248,252,252,0.8);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .medical-float {
+    animation: none;
+  }
+}
+
+/* AMS-STYLE FLOATING MEDICAL ANIMATION */
+
+.auth-info {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(
+    135deg,
+    #e8faf7,
+    #c9eee9,
+    #dceefa
+  );
+}
+
+/* Floating symbols container */
+
+.moving-medical-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Individual symbols */
+
+.moving-symbol {
+  position: absolute;
+  display: inline-block;
+  color: #078b82;
+  opacity: 0.3;
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  white-space: nowrap;
+
+  animation: moveAround 12s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Different movement directions */
+
+.moving-symbol:nth-child(2n) {
+  animation-name: moveDiagonal;
+  color: #4c83c4;
+}
+
+.moving-symbol:nth-child(3n) {
+  animation-name: moveCircular;
+  color: #d45c81;
+}
+
+/* Keep text and buttons visible */
+
+.auth-info > :not(.moving-medical-bg) {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hide old static symbols */
+
+.auth-blood {
+  display: none;
+}
+
+/* Vertical floating */
+
+@keyframes moveAround {
+  0% {
+    transform: translate(0, 0) rotate(-15deg);
+  }
+  50% {
+    transform: translate(45px, -90px) rotate(15deg);
+  }
+  100% {
+    transform: translate(-40px, 65px) rotate(-10deg);
+  }
+}
+
+/* Diagonal movement */
+
+@keyframes moveDiagonal {
+  0% {
+    transform: translate(-40px, 60px) rotate(0deg);
+  }
+  50% {
+    transform: translate(65px, -65px) rotate(25deg);
+  }
+  100% {
+    transform: translate(-55px, -100px) rotate(-20deg);
+  }
+}
+
+/* Circular floating */
+
+@keyframes moveCircular {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(55px, -45px) rotate(15deg);
+  }
+  50% {
+    transform: translate(10px, -100px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-55px, -35px) rotate(-15deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moving-symbol {
+    animation: none;
+  }
+}
+
+
+/* ========================================
+   FINDTYPE PREMIUM REGISTRATION PAGE
+======================================== */
+
+.premium-register {
+  margin: 0;
+  min-height: 100vh;
+  background: #f3f8fb;
+  font-family: 'DM Sans', sans-serif;
+  color: #172d43;
+}
+
+/* HEADER */
+
+.register-header {
+  height: 76px;
+  padding: 0 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid #e4edf0;
+  position: relative;
+  z-index: 10;
+}
+
+.register-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #17354a;
+  font: 800 25px 'Outfit', sans-serif;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 13px;
+  background: #087e82;
+  color: white;
+  font-size: 26px;
+}
+
+.teal-text {
+  color: #078b89;
+}
+
+.header-home {
+  color: #416075;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* TWO-COLUMN LAYOUT */
+
+.register-layout {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  min-height: calc(100vh - 76px);
+}
+
+/* LEFT HOSPITAL PANEL */
+
+.premium-register .register-showcase {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 75px 10%;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 70% 65%,
+      rgba(100, 208, 200, 0.4),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #dff4f1,
+      #e9f5fa 65%,
+      #d4e9f3
+    );
+}
+
+.showcase-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 540px;
+}
+
+.showcase-label {
+  display: inline-block;
+  background: white;
+  color: #087f80;
+  border: 1px solid #cce7e5;
+  border-radius: 30px;
+  padding: 10px 17px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.register-showcase h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(36px, 4vw, 58px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin: 28px 0 20px;
+  color: #17354a;
+}
+
+.register-showcase h1 span {
+  color: #087f80;
+}
+
+.register-showcase p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #547186;
+  max-width: 450px;
+}
+
+/* MEDICAL VISUAL */
+
+.showcase-visual {
+  height: 290px;
+  margin: 35px auto 15px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.visual-circle {
+  position: absolute;
+  border: 1px solid rgba(8, 127, 128, 0.2);
+  border-radius: 50%;
+}
+
+.circle-one {
+  width: 270px;
+  height: 270px;
+}
+
+.circle-two {
+  width: 220px;
+  height: 220px;
+  border-style: dashed;
+  animation: registerSpin 35s linear infinite;
+}
+
+.medical-center {
+  width: 170px;
+  height: 170px;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 55px #277e8629;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  z-index: 2;
+}
+
+.medical-center-icon {
+  font-size: 48px;
+  color: #087f80;
+}
+
+.medical-center > span {
+  font: 800 22px 'Outfit', sans-serif;
+  color: #17354a;
+}
+
+.medical-center small {
+  color: #69899a;
+  font-size: 10px;
+}
+
+.medical-orbit {
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 19px;
+  background: white;
+  box-shadow: 0 10px 30px #226d791b;
+  font-size: 26px;
+  animation: registerFloat 6s ease-in-out infinite;
+}
+
+.orbit-one {
+  top: 15px;
+  left: 12%;
+  color: #dc5c76;
+  font-weight: 800;
+}
+
+.orbit-two {
+  top: 35px;
+  right: 10%;
+  animation-delay: -2s;
+}
+
+.orbit-three {
+  bottom: 15px;
+  right: 20%;
+  animation-delay: -4s;
+}
+
+.showcase-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: #087f80;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* RIGHT FORM AREA */
+
+.register-form-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 7%;
+  background: #f8fbfd;
+  position: relative;
+  z-index: 3;
+}
+
+.premium-register-card {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border: 1px solid #e8eff2;
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 20px 65px #17354a0d;
+}
+
+.register-top {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.register-symbol {
+  width: 54px;
+  height: 54px;
+  background: #e4f5f2;
+  border-radius: 15px;
+  color: #087f80;
+  display: grid;
+  place-items: center;
+  font-size: 29px;
+  margin-bottom: 23px;
+}
+
+.register-eyebrow {
+  color: #087f80;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.register-top h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 34px;
+  letter-spacing: -0.7px;
+  color: #17354a;
+  margin: 10px 0;
+}
+
+.register-top p {
+  font-size: 14px;
+  color: #7890a1;
+  line-height: 1.7;
+}
+
+/* FORM */
+
+.premium-register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.register-field > label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #294458;
+}
+
+.register-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.register-input-wrap .input-symbol {
+  position: absolute;
+  left: 16px;
+  color: #7994a2;
+  font-size: 19px;
+  pointer-events: none;
+}
+
+.premium-register-card
+.register-input-wrap input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 52px;
+  padding: 0 78px 0 46px;
+  background: #f8fbfc;
+  border: 1px solid #dce9ec;
+  border-radius: 11px;
+  color: #17354a;
+  font: 14px 'DM Sans', sans-serif;
+  outline: none;
+  transition: 0.2s;
+}
+
+.premium-register-card
+.register-input-wrap input:focus {
+  border-color: #0d9488;
+  background: white;
+  box-shadow: 0 0 0 4px #0d948813;
+}
+
+.premium-register-card
+.register-input-wrap input::placeholder {
+  color: #a0b0bc;
+}
+
+/* PASSWORD BUTTON FIX */
+
+.premium-register-card .toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #087f80;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* CONSENT */
+
+.register-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #698092;
+  cursor: pointer;
+}
+
+.register-consent input {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  accent-color: #087f80;
+}
+
+/* SUBMIT */
+
+.register-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  padding: 17px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(110deg, #087f80, #0b9a91);
+  color: white;
+  font: 700 15px 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0 8px 22px #087f802b;
+}
+
+.register-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px #087f8040;
+}
+
+.register-submit span {
+  font-size: 21px;
+}
+
+/* FOOTER */
+
+.register-divider {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 28px 0 20px;
+}
+
+.register-divider span {
+  height: 1px;
+  flex: 1;
+  background: #e1ebee;
+}
+
+.register-divider small {
+  font-size: 10px;
+  color: #9aadb9;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.register-login-link {
+  display: block;
+  text-align: center;
+  border: 1px solid #cfe5e4;
+  border-radius: 10px;
+  padding: 14px;
+  color: #087f80;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.register-login-link:hover {
+  background: #e9f7f4;
+}
+
+.register-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 11px;
+  color: #a0b1bb;
+}
+
+.register-bottom span {
+  color: #087f80;
+  margin-right: 5px;
+}
+
+/* ANIMATIONS */
+
+@keyframes registerFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(8deg);
+  }
+}
+
+@keyframes registerSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+  .register-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .premium-register .register-showcase {
+    padding: 55px 7%;
+  }
+
+  .register-form-area {
+    padding: 40px 5%;
+  }
+}
+
+@media (max-width: 520px) {
+  .register-header {
+    padding: 0 5%;
+  }
+
+  .premium-register-card {
+    padding: 27px 21px;
+  }
+
+  .register-top h2 {
+    font-size: 29px;
+  }
+
+  .showcase-visual {
+    height: 230px;
+  }
+
+  .circle-one {
+    width: 220px;
+    height: 220px;
+  }
+
+  .circle-two {
+    width: 185px;
+    height: 185px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .medical-orbit,
+  .circle-two {
+    animation: none;
+  }
+}
+
+/* REGISTRATION PAGE FIX */
+
+.auth-body {
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 35px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.auth-card * {
+  box-sizing: border-box;
+}
+
+.auth-card h2 {
+  font-family: 'Outfit', Arial, sans-serif;
+  font-size: 30px;
+  color: #17354a;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.auth-card input:not([type="checkbox"]) {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 49px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.password-wrapper input {
+  width: 100% !important;
+  padding-right: 75px !important;
+}
+
+.password-wrapper .toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #087f80;
+  cursor: pointer;
+}
+
+.auth-card label {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 13px;
+  color: #294458;
+}
+
+.auth-form-section {
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 25px 20px;
+  }
+}
+
+/* ========================================
+   FINDTYPE PREMIUM REGISTRATION PAGE
+======================================== */
+
+.premium-register {
+  margin: 0;
+  min-height: 100vh;
+  background: #f3f8fb;
+  font-family: 'DM Sans', sans-serif;
+  color: #172d43;
+}
+
+/* HEADER */
+
+.register-header {
+  height: 76px;
+  padding: 0 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid #e4edf0;
+  position: relative;
+  z-index: 10;
+}
+
+.register-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #17354a;
+  font: 800 25px 'Outfit', sans-serif;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 13px;
+  background: #087e82;
+  color: white;
+  font-size: 26px;
+}
+
+.teal-text {
+  color: #078b89;
+}
+
+.header-home {
+  color: #416075;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* TWO-COLUMN LAYOUT */
+
+.register-layout {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  min-height: calc(100vh - 76px);
+}
+
+/* LEFT HOSPITAL PANEL */
+
+.premium-register .register-showcase {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 75px 10%;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 70% 65%,
+      rgba(100, 208, 200, 0.4),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #dff4f1,
+      #e9f5fa 65%,
+      #d4e9f3
+    );
+}
+
+.showcase-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 540px;
+}
+
+.showcase-label {
+  display: inline-block;
+  background: white;
+  color: #087f80;
+  border: 1px solid #cce7e5;
+  border-radius: 30px;
+  padding: 10px 17px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.register-showcase h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(36px, 4vw, 58px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin: 28px 0 20px;
+  color: #17354a;
+}
+
+.register-showcase h1 span {
+  color: #087f80;
+}
+
+.register-showcase p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #547186;
+  max-width: 450px;
+}
+
+/* MEDICAL VISUAL */
+
+.showcase-visual {
+  height: 290px;
+  margin: 35px auto 15px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.visual-circle {
+  position: absolute;
+  border: 1px solid rgba(8, 127, 128, 0.2);
+  border-radius: 50%;
+}
+
+.circle-one {
+  width: 270px;
+  height: 270px;
+}
+
+.circle-two {
+  width: 220px;
+  height: 220px;
+  border-style: dashed;
+  animation: registerSpin 35s linear infinite;
+}
+
+.medical-center {
+  width: 170px;
+  height: 170px;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 55px #277e8629;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  z-index: 2;
+}
+
+.medical-center-icon {
+  font-size: 48px;
+  color: #087f80;
+}
+
+.medical-center > span {
+  font: 800 22px 'Outfit', sans-serif;
+  color: #17354a;
+}
+
+.medical-center small {
+  color: #69899a;
+  font-size: 10px;
+}
+
+.medical-orbit {
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 19px;
+  background: white;
+  box-shadow: 0 10px 30px #226d791b;
+  font-size: 26px;
+  animation: registerFloat 6s ease-in-out infinite;
+}
+
+.orbit-one {
+  top: 15px;
+  left: 12%;
+  color: #dc5c76;
+  font-weight: 800;
+}
+
+.orbit-two {
+  top: 35px;
+  right: 10%;
+  animation-delay: -2s;
+}
+
+.orbit-three {
+  bottom: 15px;
+  right: 20%;
+  animation-delay: -4s;
+}
+
+.showcase-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: #087f80;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* RIGHT FORM AREA */
+
+.register-form-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 7%;
+  background: #f8fbfd;
+  position: relative;
+  z-index: 3;
+}
+
+.premium-register-card {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border: 1px solid #e8eff2;
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 20px 65px #17354a0d;
+}
+
+.register-top {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.register-symbol {
+  width: 54px;
+  height: 54px;
+  background: #e4f5f2;
+  border-radius: 15px;
+  color: #087f80;
+  display: grid;
+  place-items: center;
+  font-size: 29px;
+  margin-bottom: 23px;
+}
+
+.register-eyebrow {
+  color: #087f80;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.register-top h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 34px;
+  letter-spacing: -0.7px;
+  color: #17354a;
+  margin: 10px 0;
+}
+
+.register-top p {
+  font-size: 14px;
+  color: #7890a1;
+  line-height: 1.7;
+}
+
+/* FORM */
+
+.premium-register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.register-field > label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #294458;
+}
+
+.register-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.register-input-wrap .input-symbol {
+  position: absolute;
+  left: 16px;
+  color: #7994a2;
+  font-size: 19px;
+  pointer-events: none;
+}
+
+.premium-register-card
+.register-input-wrap input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 52px;
+  padding: 0 78px 0 46px;
+  background: #f8fbfc;
+  border: 1px solid #dce9ec;
+  border-radius: 11px;
+  color: #17354a;
+  font: 14px 'DM Sans', sans-serif;
+  outline: none;
+  transition: 0.2s;
+}
+
+.premium-register-card
+.register-input-wrap input:focus {
+  border-color: #0d9488;
+  background: white;
+  box-shadow: 0 0 0 4px #0d948813;
+}
+
+.premium-register-card
+.register-input-wrap input::placeholder {
+  color: #a0b0bc;
+}
+
+/* PASSWORD BUTTON FIX */
+
+.premium-register-card .toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #087f80;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* CONSENT */
+
+.register-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #698092;
+  cursor: pointer;
+}
+
+.register-consent input {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  accent-color: #087f80;
+}
+
+/* SUBMIT */
+
+.register-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  padding: 17px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(110deg, #087f80, #0b9a91);
+  color: white;
+  font: 700 15px 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0 8px 22px #087f802b;
+}
+
+.register-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px #087f8040;
+}
+
+.register-submit span {
+  font-size: 21px;
+}
+
+/* FOOTER */
+
+.register-divider {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 28px 0 20px;
+}
+
+.register-divider span {
+  height: 1px;
+  flex: 1;
+  background: #e1ebee;
+}
+
+.register-divider small {
+  font-size: 10px;
+  color: #9aadb9;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.register-login-link {
+  display: block;
+  text-align: center;
+  border: 1px solid #cfe5e4;
+  border-radius: 10px;
+  padding: 14px;
+  color: #087f80;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.register-login-link:hover {
+  background: #e9f7f4;
+}
+
+.register-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 11px;
+  color: #a0b1bb;
+}
+
+.register-bottom span {
+  color: #087f80;
+  margin-right: 5px;
+}
+
+/* ANIMATIONS */
+
+@keyframes registerFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(8deg);
+  }
+}
+
+@keyframes registerSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+  .register-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .premium-register .register-showcase {
+    padding: 55px 7%;
+  }
+
+  .register-form-area {
+    padding: 40px 5%;
+  }
+}
+
+@media (max-width: 520px) {
+  .register-header {
+    padding: 0 5%;
+  }
+
+  .premium-register-card {
+    padding: 27px 21px;
+  }
+
+  .register-top h2 {
+    font-size: 29px;
+  }
+
+  .showcase-visual {
+    height: 230px;
+  }
+
+  .circle-one {
+    width: 220px;
+    height: 220px;
+  }
+
+  .circle-two {
+    width: 185px;
+    height: 185px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .medical-orbit,
+  .circle-two {
+    animation: none;
+  }
+}
+
+/* MOVING MEDICAL SYMBOLS BEHIND REGISTRATION CARD */
+
+.auth-form-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(
+    145deg,
+    #f8fdfd,
+    #eaf8f6,
+    #edf6fc
+  );
+}
+
+/* Animation background */
+.register-medical-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Each floating symbol */
+.register-medical-bg span {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--size);
+  font-weight: 800;
+  color: var(--color);
+  opacity: 0.24;
+
+  animation: registerDrift
+    var(--speed) ease-in-out infinite alternate;
+
+  animation-delay: var(--delay);
+}
+
+/* Keep the form above moving symbols */
+.auth-form-section .auth-card {
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+}
+
+/* Different movement */
+@keyframes registerDrift {
+  0% {
+    transform: translate(0, 0) rotate(-12deg);
+  }
+
+  50% {
+    transform: translate(35px, -55px) rotate(10deg);
+  }
+
+  100% {
+    transform: translate(-25px, 40px) rotate(-8deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .register-medical-bg span {
+    animation: none;
+  }
+}
+
+/* SAME BACKGROUND COLOUR ON BOTH SIDES */
+
+.auth-info,
+.auth-form-section {
+  background: linear-gradient(
+    135deg,
+    #e8faf7,
+    #c9eee9,
+    #dceefa
+  ) !important;
+}
+
+/* Same floating symbol colours */
+.register-medical-bg span {
+  color: #078b82 !important;
+  opacity: 0.3;
+}
+
+/* Keep registration card white */
+.auth-form-section .auth-card {
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+}
+
+/* EXACT SAME COLOUR ON LEFT AND RIGHT */
+
+.auth-container {
+  background: linear-gradient(
+    135deg,
+    #e8faf7 0%,
+    #c9eee9 55%,
+    #dceefa 100%
+  );
+}
+
+.auth-container > .auth-info,
+.auth-container > .auth-form-section {
+  background: transparent !important;
+}
+
+/* Right side moving symbols */
+.auth-form-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.register-medical-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.register-medical-bg span {
+  position: absolute;
+  color: #078b82 !important;
+  opacity: 0.3;
+  animation: registerDrift 12s ease-in-out infinite alternate;
+}
+
+/* White form above the animation */
+.auth-form-section > .auth-card {
+  position: relative;
+  z-index: 2;
+  background: white;
+}
+
+
+/* FIX ACTUAL CREATE ACCOUNT BUTTON */
+
+button.auth-submit {
+  display: block !important;
+  width: 100% !important;
+  min-height: 54px !important;
+
+  background: #087f80 !important;
+  background-image: none !important;
+  color: white !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  border: none !important;
+  border-radius: 11px !important;
+
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+
+  animation: none !important;
+}
+
+button.auth-submit:hover {
+  background: #065f60 !important;
+}
+  
